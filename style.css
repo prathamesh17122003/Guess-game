@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    display: flex;
+    background-color: rgb(70, 164, 252);
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid rgb(0, 59, 94);;
+    border-bottom: 5px solid rgb(0, 59, 94);
+    z-index: 1;
+}
+.container{
+    background-image: url('./background.jpg');
+    width: 100%;
+    height: 572px;
+}
+.container h3{
+    text-align: center;
+    color: aqua;
+    padding-top: 50px;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    color: aqua;
+    font-size: 22px;
+}
+#input1{
+    margin-right: 35px;
+    border-radius: 50px;
+    text-align: center;
+    height: 20px;
+}
+#input2{
+    margin-left: 35px;
+    border-radius: 50px;
+    text-align: center;
+    height: 20px;
+}
+.chances{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#input3{
+    border-radius: 50px;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    margin-top: 35px;
+}
+.play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+#btn{
+    width: 90px;
+    height: 27px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+#btn:hover{
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+}
+.guess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#input4{
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+#statement{
+    margin-top: 10px;
+}
+#answ{
+    width: 70px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+#statement{
+    color: aqua;
+}

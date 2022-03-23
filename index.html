@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Guess the number</h1> 
+    </div>
+    <div class="container">
+        <h3>Provide the range in which you would like to guess number:</h3>
+        <div class="inputs">
+            <input type="number" id="input1" placeholder="Enter here"> to <input type="number" id="input2"
+                placeholder="Enter here">
+        </div>
+        <div class="chances">
+            <h3>How many chances would you like to have:</h3>
+            <input type="number" id="input3" placeholder="Enter here">
+        </div>
+        <div class="play">
+            <h3>Click here to start game:</h3>
+            <button id="btn" onclick="store()">PLAY</button>
+        </div>
+        <div class="guess">
+            <h3>Write your guess here:</h3>
+            <input type="number" id="input4" placeholder="Enter here">
+            <div id="statement"></div>
+            <button id="answ" onclick="checking()">CHECK</button>
+        </div>
+    </div>
+    <script>
+        let over;
+        let ans;
+        function store() {
+            let a = document.getElementById('input1').value;
+            let b = document.getElementById('input2').value;
+            let c = document.getElementById('input3').value;
+            let n = Math.random();
+            let check = Number(a)+(Number(b)-Number(a))*n;
+            let answer = Math.round(check);
+            ans = answer;
+            console.log(ans);
+            over = c;
+        }
+        let count = 0;
+        function checking() {
+            let submit = document.getElementById('input4').value;
+            document.getElementById('answ');
+            count = count + 1;
+            if (count == Number(over)+Number(1)) {
+                document.getElementById('statement').innerHTML = "Sorry! your chances are over, "+count;
+            }
+            else if (submit < ans) {
+                document.getElementById('statement').innerHTML = "Your guessed number is smaller, "+count;
+            }
+            else if (submit > ans) {
+                document.getElementById('statement').innerHTML = "Your guessed number is greater, "+count;
+            }
+            else if (submit == ans) {
+                document.getElementById('statement').innerHTML = "Congrats! you guessed correct number, "+count;
+            }
+        }
+    </script>
+</body>
+
+</html>
